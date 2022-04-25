@@ -1,28 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <keep-alive>的作用是不被销毁，切换到这个界面的时候保持切换前的状态  -->
+      <!-- vue 2x的写法 -->
+    <!-- <keep-alive>
+       <router-view v-if="$route.meta.keepAlive"></router-view>
+    </keep-alive>
+    <router-view v-if=" !$route.meta.keepAlive" /> -->
+      <!-- vue 3x的写法 -->
+    
+   <!-- <router-view v-slot="{Component}">
+     <keep-alive :exclude="Detail">
+       <component :is="Component" />
+     </keep-alive>
+   </router-view> -->
+   <!-- 上面vue3x的写法有bug，详情页需要清空缓存，但是结果并没有清除，下面的代码正确 -->
+   <router-view v-slot="{Component,route}">
+     <keep-alive>
+       <component :is="Component" :key="route.path" v-if="route.meta.keepAlive"/>
+     </keep-alive>
+     <component :is="Component" v-if="!route.meta.keepAlive"/>
+   </router-view>
+    
+    <main-tab-bar></main-tab-bar>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainTabBar from 'components/content/mainTabbar/MainTabBar.vue';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components: {//在components里注册组件后才能在模板里使用
+   MainTabBar,
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import "assets/css/base.css";
+
 </style>

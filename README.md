@@ -1,19 +1,23 @@
-# vue-mobilemetting
+# vue
 
-## Project setup
-```
+> 这是用vue3+vue-router+vuex+vue-cli4实现的一个移动端会议预约管理系统
+
+
+## 操作步骤
+
+``` bash
+# 克隆项目
+git clone https://github.com/lisbeth0720/vue-mobilemetting.git
+
+# 切换目录
+cd vue-mobilemetting
+
+# 安装依赖
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# 启动server
+npm run dev
 
-### Compiles and minifies for production
-```
+# 编译发布
 npm run build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
