@@ -6,6 +6,7 @@
             <!-- <a :href="item.link"> -->
              <div class="item-left">
                  <img src="~/assets/img/common/default.jpg" />
+                 <span class="roomStatus">{{getRoomStatus(item.Status)}}</span>
                 <!-- <img v-if="item.Picture" :src="item.Picture" />
                 <img else :src="pictureUrl"/> -->
              </div>
@@ -45,10 +46,32 @@ export default {
   },
   data(){
       return{
-         
+         //roomStatus:"启用"
       }
+  },
+  computed(){
+    
+    
+     
+  },
+  methods:{
+      //得到会议室状态
+      getRoomStatus(Status){
+        let roomStatus="启用"
+        if (Status == "0") {
+            roomStatus = "启用";
+        } else if (Status == "1") {
+            roomStatus = "审核";
+        } else if (Status == "2") {
+            roomStatus = "禁用";
+        } else if (Status == "3") {
+            roomStatus = "维修";
+        } else if (Status == "4") {
+            roomStatus = "预留";
+        }
+        return roomStatus;
+     }   
   }
-  
 }
 </script>
 
@@ -69,12 +92,28 @@ export default {
        width:36%;
        height:100%;
        float: left;
+       position:relative;
    }
    .item-left img{
        height:70px;
        width:70px;
        position:relative;
        top:10px;
+   }
+   .roomStatus{
+       display: block;
+       width: 70px;
+       height: 20px;
+       text-align: center;
+       overflow: hidden;
+       /* background: #4398f6; */
+       background: rgba(67,152,246,0.6);
+       color: #fff;
+       line-height: 20px;
+       position: absolute;
+       bottom:10px;
+       left:50%;
+       transform: translate(-50%,0);
    }
    .item-right{
        width:64%;

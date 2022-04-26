@@ -10,6 +10,15 @@
                      :pull-up-load="true"
                      @pulling-up="loadMore">
           <home-swiper :banners="banners" />
+          <!-- <div @click="openScreen">
+             
+          </div> -->
+          <div>222222</div>
+          <div>222222</div>
+          <div>222222</div>
+          <div>222222</div>
+          <div>222222</div>
+          <button @click="nav=true">筛选</button>
           <room-list :rooms="rooms"></room-list>
           <ul>
             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
@@ -255,6 +264,10 @@
           </ul>
       </better-scroll>
       <back-top @click.native="backTop" v-show="isShowBackTop"/>
+      <div class="m-navbar" v-if="nav" @click="nav=false"></div>
+      <transition name="nav">
+             <screen v-if="nav" class="m-navba"></screen>
+      </transition>
   </div>
 </template>
 
@@ -268,6 +281,7 @@
  //2.子组件
   import HomeSwiper from './childComps/HomeSwiper.vue'
   import RoomList from './childComps/RoomList.vue'
+  import Screen from './childComps/Screen.vue'
   
   //3.一些方法
   import {getTocken,getMaxTicket,getHomeSwiper,getRoomList} from "network/home.js";
@@ -284,7 +298,8 @@
       HomeSwiper,
       RoomList,
       BetterScroll,
-      BackTop
+      BackTop,
+      Screen
     },
     data() {
 		  return {
@@ -296,6 +311,7 @@
         isShowBackTop: false,
         tabOffsetTop: 0,
         isTabFixed: false,
+        nav:false
         
       }
     },
@@ -349,7 +365,7 @@
     },
     methods: {
        contentScroll(position){
-         console.log(position)
+         //console.log(position)
          //1.判断BackTop是否显示
          this.isShowBackTop=(-position.y)>BACK_POSITION;
 
@@ -362,6 +378,10 @@
       //判断是否回到顶部是否显示
       backTop(){
           this.$refs.scroll.scrollToTop(0,0);
+      },
+      //弹出筛选框
+      openScreen(){
+
       }
 
     }
@@ -416,7 +436,7 @@
        /* margin-top:44px;  */
        /* calc(100%-93px)不加空格无效 */ 
        height:calc(100% - 93px); 
-      overflow:hidden;
+       overflow:hidden;
     }
    .tab-control{
      /* position:sticky;
@@ -424,5 +444,51 @@
      position:relative;
      z-index:9;
    }
-   
+   .v-enter,.v-leave-to{
+     transform: translateX(100%)
+   }
+
+   .m-navbar{
+    position: fixed;
+    left:-3px;
+    top:44px;
+    bottom:49px;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.5;
+    z-index:2;
+    height:calc(100% - 93px); 
+   }
+/*存放弹框内容*/
+.m-navba{
+   position:absolute ;
+   left: 100px;
+   right:0;
+   top: 0;
+   bottom: 0;
+   background-color: #fff;
+   z-index:1000;
+}
+.nav-Leave{
+   /*定义出场动画的起始状态*//*只停留一帧*/
+   transform: translateX(0px);
+}
+.nav-leave-active {
+   /*定义出场动画过程*/
+   transition: all 0.8s ease;
+}
+.nav-leave-to{
+   transform: translateX(600px)
+}
+.nav-enter{
+   transform: translateX(600px)
+}
+.nav-enter-active {
+/*定义入场动画过程*/
+   transition: all 0.8s ease;
+}
+.nav-enter-to{
+   transform: translateX(0px)
+}
 </style>
