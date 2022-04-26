@@ -3,20 +3,274 @@
       <nav-bar class="home-nav">
         <template v-slot:center><div>首页</div></template>
       </nav-bar> 
+      <better-scroll class="content" 
+                     ref="scroll" 
+                     :probe-type="3" 
+                     @scroll="contentScroll"
+                     :pull-up-load="true"
+                     @pulling-up="loadMore">
+          <home-swiper :banners="banners" />
+          <room-list :rooms="rooms"></room-list>
+          <ul>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
+          </ul>
+      </better-scroll>
+      <back-top @click.native="backTop" v-show="isShowBackTop"/>
   </div>
 </template>
 
 <script>
  //1.1公共组件或者常量
   import NavBar from 'components/common/navbar/NavBar.vue'
-  
+  import BetterScroll from 'components/common/scroll/BetterScroll.vue'
+  import BackTop from 'components/content/backTop/BackTop.vue'
+  import {BACK_POSITION} from 'common/const.js'
 
  //2.子组件
- // import HomeSwiper from './childComps/HomeSwiper.vue'
-  
+  import HomeSwiper from './childComps/HomeSwiper.vue'
+  import RoomList from './childComps/RoomList.vue'
   
   //3.一些方法
-  //import {getHomeMultidata,getHomeGoods} from "network/home.js";
+  import {getTocken,getMaxTicket,getHomeSwiper,getRoomList} from "network/home.js";
   //import {debounce} from "common/utils.js";
  //import {itemListenerMixin} from "common/mixin.js";
 
@@ -26,17 +280,18 @@
   export default {
 		name: "Home",
     components: {
-		  NavBar
+		  NavBar,
+      HomeSwiper,
+      RoomList,
+      BetterScroll,
+      BackTop
     },
     data() {
 		  return {
-		    banners: [],
-        recommends: [],
-        goods: {
-          'pop': {page: 0, list: []},
-          'new': {page: 0, list: []},
-          'sell':{page: 0, list: []}
-        },
+        Ticket:"",
+        MaxTicket:"",
+        banners: [],
+        rooms:[],
         currentType: "pop",
         isShowBackTop: false,
         tabOffsetTop: 0,
@@ -54,7 +309,36 @@
      
     },
     created() {
-      
+      //得到短Token
+      getTocken().then(res=>{
+         if(res.code=="0"){
+				   this.Ticket=res.data.Ticket;
+				   this.MaxTicket=res.data.MaxTicket;
+				   localStorage.setItem('Ticket',this.Ticket);
+				   localStorage.setItem('MaxTicket',this.MaxTicket);
+				   //localStorage.setItem('username',this.username);
+			  }
+      })
+      //得到长Token
+      getMaxTicket().then(res=>{
+        if(res.code=="0"){
+			   	return "0";
+		   	}else if(res.code=="30007"){
+			   	//window.location.href="../login.html";
+		  	}else{
+				  //window.location.href="../login.html";
+		  	}
+      })
+
+     //得到首页轮播数据
+      getHomeSwiper().then(res => {
+          this.banners = res.data.data
+      })
+      //得到会议室列表
+      getRoomList().then(res=>{
+          console.log(res)
+          this.rooms = res.data.data
+      })
     },
     mounted(){
       
@@ -64,6 +348,21 @@
        
     },
     methods: {
+       contentScroll(position){
+         console.log(position)
+         //1.判断BackTop是否显示
+         this.isShowBackTop=(-position.y)>BACK_POSITION;
+
+         //2.判断tabControl是否吸顶（position:fixed)
+         //this.isTabFixed=(-position.y)>this.tabOffsetTop;
+      },
+      loadMore() {//下拉加载更多
+		    
+      },
+      //判断是否回到顶部是否显示
+      backTop(){
+          this.$refs.scroll.scrollToTop(0,0);
+      }
 
     }
 	}
@@ -99,7 +398,7 @@
    .home-nav{
      background-color: var(--color-tint);
      font-weight: 700;
-     color: #fff;
+     color: #000;
      /*下面的代码是用浏览器原生滚动时防止顶部导航随着滚动而滚动设置的，现在用了better-scroll所以不用设置了 */
      /* position:fixed;
      top:0;

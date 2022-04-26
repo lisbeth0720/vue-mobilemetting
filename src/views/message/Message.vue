@@ -7,12 +7,12 @@
 </template>
 
 <script>
-  //import NavBar from 'components/common/navbar/NavBar.vue'
+  import NavBar from 'components/common/navbar/NavBar.vue'
   //import CartList from './childComps/CartList'
 	export default {
 		name: "Message",
     components: {
-		 
+		  NavBar
     },
     computed: {
       
@@ -30,7 +30,7 @@
   .nav-bar {
     background-color: var(--color-tint);
     font-weight: 700;
-    color: #fff;
+    color: #000;
   }
   .cart-list {
     position: absolute;

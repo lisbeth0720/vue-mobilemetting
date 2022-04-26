@@ -1,5 +1,56 @@
 //公共的方法
 
+//访问token
+export function getToken(){
+	var companyID=document.querySelector("#companyID").value;
+	var username=document.querySelector("#account").value;
+	var password=document.querySelector("#password").value;
+	mui.ajax(baseURL+'/api/users/gettokenbyjwt/v2',{
+		data:{
+			companyid:companyID,
+			username:username,
+			password:password
+		},
+		dataType:'json',
+		type:'get',
+		timeout:10000,
+		success:function(data){
+			if(data.code=="0"){
+				var Ticket=data.data.Ticket;
+				var MaxTicket=data.data.MaxTicket;
+				localStorage.setItem('Ticket',Ticket);
+				localStorage.setItem('MaxTicket',MaxTicket);
+				localStorage.setItem('username',username);
+			}
+		},error:function(xhr){
+			
+		}
+	})
+}
+//获取长token
+export function getMaxTicket(){
+	var maxTicket="Bearer "+localStorage.getItem("MaxTicket");
+	mui.ajax(baseURL+'/api/users/gettokenbyTicket/v2',{
+		data:{
+			token:maxTicket
+		},
+		dataType:'json',
+		type:'get',
+		timeout:10000,
+		success:function(data){
+			if(data.code=="0"){
+				return "0"
+			}else if(data.code=="30007"){
+				window.location.href="../login.html";
+			}else{
+				window.location.href="../login.html";
+			}
+		},error:function(xhr){
+			
+		}
+	})
+}
+
 //1.防抖动函数
 export function debounce(func,delay=50){
   let timer = null;

@@ -5,34 +5,34 @@
          <img slot="item-icon-active" src="~/assets/img/tabbar/profile_active.svg" alt="" />
          <div slot="item-text">我的</div>
       </tab-bar-item>  -->    
-      <tab-bar-item path="/home" activeColor="red">
+      <tab-bar-item path="/home" activeColor="#007aff">
          <template v-slot:item-icon>
-           <img src="~/assets/img/tabbar/home.svg" alt="" />
+           <img src="~/assets/img/tabbar/home.png" alt="" />
          </template>
          <template v-slot:item-icon-active>
-            <img src="~/assets/img/tabbar/home_active.svg" alt="" />
+            <img src="~/assets/img/tabbar/home_active.png" alt="" />
          </template>
          <template v-slot:item-text>
               <div>首页</div>
          </template>
       </tab-bar-item>
-      <tab-bar-item path="/category" activeColor="red">
+      <tab-bar-item path="/category" activeColor="#007aff">
          <template v-slot:item-icon>
-             <img src="~/assets/img/tabbar/message.svg" alt="" />
+             <img src="~/assets/img/tabbar/message.png" alt="" />
          </template>
          <template v-slot:item-icon-active>
-             <img src="~/assets/img/tabbar/message_active.svg" alt="" />
+             <img src="~/assets/img/tabbar/message_active.png" alt="" />
          </template>
          <template v-slot:item-text>
              <div>消息</div>
          </template>
       </tab-bar-item>
-      <tab-bar-item path="/profile" activeColor="red">
+      <tab-bar-item path="/profile" activeColor="#007aff">
          <template v-slot:item-icon>
-            <img src="~/assets/img/tabbar/profile.svg" alt="" />
+            <img src="~/assets/img/tabbar/profile.png" alt="" />
          </template>
          <template v-slot:item-icon-active>
-            <img src="~/assets/img/tabbar/profile_active.svg" alt="" />
+            <img src="~/assets/img/tabbar/profile_active.png" alt="" />
          </template>
          <template v-slot:item-text>
              <div>我的</div>

@@ -74,7 +74,7 @@
   .nav-bar {
     background-color: var(--color-tint);
     font-weight: 700;
-    color: #fff;
+    color: #000;
   }
 
   .account {

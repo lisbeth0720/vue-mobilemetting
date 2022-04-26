@@ -1,0 +1,36 @@
+{
+    "data": {
+            "data": [
+                {
+                    "height": 390,
+                    "image": "data/home/swiper/swiper1.jpg",
+                    "link": "https://act.mogujie.com/huanxin0001?acm=3.mce.2_10_1jhwa.43542.0.ccy5br4OlfK0Q.pos_0-m_454801-sd_119",
+                    "title": "\u7115\u65b0\u5973\u88c5\u8282",
+                    "width": 750
+                },
+                {
+                    "height": 390,
+                    "image": "data/home/swiper/swiper2.jpg",
+                    "link": "https://act.mogujie.com/ruqiu00001?acm=3.mce.2_10_1ji16.43542.0.ccy5br4OlfK0R.pos_1-m_454889-sd_119",
+                    "title": "\u5165\u79cb\u7a7f\u642d\u6307\u5357",
+                    "width": 750
+                },
+                {
+                    "height": 390,
+                    "image": "data/home/swiper/swiper3.jpg",
+                    "link": "https://act.mogujie.com/huanji001?acm=3.mce.2_10_1jfj8.43542.0.ccy5br4OlfK0S.pos_2-m_453270-sd_119",
+                    "title": "\u79cb\u5b63\u62a4\u80a4\u5927\u4f5c\u6218",
+                    "width": 750
+                },
+                {
+                    "height": 390,
+                    "image": "data/home/swiper/swiper4.jpg",
+                    "link": "https://act.mogujie.com/liuxing00001?acm=3.mce.2_10_1jepe.43542.0.ccy5br4OlfK0T.pos_3-m_452733-sd_119",
+                    "title": "\u6d41\u884c\u62a2\u5148\u4e00\u6b65",
+                    "width": 750
+                }
+            ]
+    },
+    "success":true,
+    "message":"成功"
+}
