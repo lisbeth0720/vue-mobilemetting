@@ -1,5 +1,5 @@
 <template>
-    <div class="RoomList">
+    <div class="roomList">
          <!-- v-for后面添加:key='item' 不然报错 -->
         <div v-for="item in rooms" :key='item' class="roomList-item">
          <!-- 用变量里的属性需要加冒号 -->
@@ -21,8 +21,9 @@
                     </li>
                     <li>
                         <span class="device">
+                             <i v-for="deviceItem in item.deviceList" :key="deviceItem">{{deviceItem.deviceName}}</i>
                             <!-- 设备多余5个的暂时就不显示 -->
-                            <i v-for="deviceItem in item.deviceList" :key="deviceItem" v-if="item.deviceList.length<5">{{deviceItem.deviceName}}</i>
+                            <!-- <i v-for="deviceItem in item.deviceList" :key="deviceItem" v-if="item.deviceList.length<5">{{deviceItem.deviceName}}</i> -->
                             
                         </span>
                     </li>
@@ -78,49 +79,50 @@ export default {
 <style>
    .roomList{
        width:100%;
-       /* display:flex; */
-       padding:10px 0 20px;
        border-bottom: 8px solid #eee;
+       background-color: #fff;
    }
    .roomList-item{
        /* flex:1; */
        font-size:12px;
        text-align: center;
        height:90px;
+       display:flex;
+       border-bottom:1px solid #c8c7cc;
    }
    .item-left{
-       width:36%;
+       width:70px;
        height:100%;
-       float: left;
        position:relative;
    }
    .item-left img{
-       height:70px;
-       width:70px;
-       position:relative;
+       height:42px;
+       width:42px;
+       position: relative;
        top:10px;
    }
    .roomStatus{
        display: block;
-       width: 70px;
+       width:42px;
        height: 20px;
        text-align: center;
        overflow: hidden;
-       /* background: #4398f6; */
-       background: rgba(67,152,246,0.6);
+       background: rgba(67,152,246,0.9);
        color: #fff;
        line-height: 20px;
        position: absolute;
        bottom:10px;
        left:50%;
        transform: translate(-50%,0);
+       border-radius: 4px;
    }
    .item-right{
+       flex:1;
        width:64%;
        height:90%;
        position:relative;
        top:10px;
-       float: left;
+       /* float: left; */
        list-style: none;
    }
    .item-right li{
@@ -136,8 +138,9 @@ export default {
         font-size:14px;
    }
    .device{
-       /* white-space: nowrap; */
+       white-space: nowrap;
        overflow: hidden;
+       text-overflow: ellipsis;
    }
    .device i{
        font-style: normal;

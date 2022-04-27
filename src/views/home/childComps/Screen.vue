@@ -1,45 +1,53 @@
 <template>
 <div id="screen">
     <div class="selectDiv">
-        <p id="selectStartTime" class="commonTime">
-			<span id="startTime" align="left" class="commonSelectTime">开始时间</span>
-			<span id="time1" class="selectBtn" align="right" data-options="{}">选择开始时间<img src="~/assets/img/common/jinru3.png" class="icon" />	</span>	
+        <p class="commonP p1">
+			<input id="startTime" 
+                   ref="startTime" 
+                   placeholder="开始时间"
+                   v-model="startTime"/>
+			<!-- <span id="time1" class="selectBtn" align="right" data-options="{}">选择开始时间<img src="~/assets/img/common/jinru3.png" class="icon" />	</span>	 -->
 		</p>
-        <p id="selectEndTime" class="commonTime">
-			<span id="endTime" align="left" class="commonSelectTime">结束时间</span>
-			<span id="time2" class="selectBtn" align="right" data-options="{}">选择结束时间<img src="~/assets/img/common/jinru3.png" class="icon" /></span>		
+        <p class="commonP p1">
+			<input id="endTime" 
+                   ref="endTime" 
+                   placeholder="结束时间"
+                   v-model="endTime"/>
+			<!-- <span id="time2" class="selectBtn" align="right" data-options="{}">选择结束时间<img src="~/assets/img/common/jinru3.png" class="icon" /></span>		 -->
 		</p>
-        <p class="commonTime">
-			<span class="commonSelectTime">参会人数</span>
-			<input id="selectNumCount" class="commonInput" type="text" value="" placeholder="容纳人数" autocomplete="off">
+        <p class="commonP p1">
+			<input id="selectNumCount" 
+                   type="text" 
+                   placeholder="参会人数" 
+                   ref="selectNumCount"
+                   autocomplete="off" 
+                   v-model="numCount"/>
 		</p>
-        <div class="selectDevice">
-			<p class="commonTime">
+		<p class="commonP">
 				<span style="margin-left: 10px;">设备名</span>
-				<input id="selectDevice" class="commonInput" type="text" value="" placeholder="多个设备用英文,分隔 " autocomplete="off">
-			</p>
-		</div>
+				<input id="selectDevice"  
+                       type="text" 
+                       placeholder="多个设备用英文,分隔" 
+                       autocomplete="off"
+                       v-model="device" />
+		</p>
     </div>
     <div class="bottomBtn">
-		<button type="button" class="commSubmitBtn" id="resetBtn">重置</button>
-		<button type="button" class="commSubmitBtn activeBtn" id="submitBtn">确认</button>
+		<button type="button" 
+                class="commSubmitBtn" 
+                id="resetBtn">重置</button>
+		<button type="button" 
+                 class="commSubmitBtn activeBtn" 
+                 id="submitBtn"       
+                 @click="getScreen">确认</button>
 	</div>
-    <!-- <calendar ref="calendar1"
-                :events="calendar1.events" 
-                :lunar="calendar1.lunar" 
-                :value="calendar1.value" 
-                :begin="calendar1.begin" 
-                :end="calendar1.end" 
-                :weeks="calendar1.weeks" 
-                :months="calendar1.months" 
-                @select="calendar1.select"
-                @selectMonth="calendar1.selectMonth"
-                @selectYear="calendar1.selectYear"></calendar> -->
  </div>
 </template>
 
 <script>
-import Calendar from 'components/common/calendar/Calendar.vue'
+import { useStore } from 'vuex'
+import {mapActions} from 'vuex'
+
 
 export default {
   name: 'Screen',
@@ -47,100 +55,48 @@ export default {
      
   },
   components: {
-      Calendar
+      
   },
   data(){
+      const store = useStore()
       return {
-         calendar1:{
-                value:[2017,7,20], //默认日期
-                // lunar:true, //显示农历
-                weeks:['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-                months:['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-                events:{
-                    '2017-7-7':'$408',
-                    '2017-7-20':'$408',
-                    '2017-7-21':'$460',
-                    '2017-7-22':'$500',
-                },
-                select(value){
-                    console.log(value.toString());
-                },
-                selectMonth(month,year){
-                    console.log(year,month)
-                },
-                selectYear(year){
-                    console.log(year)
-                },
-                timestamp:Date.now()
-            },
-            calendar2:{
-                range:true,
-                value:[[2017,12,1],[2019,2,16]], //默认日期
-                lunar:true, //显示农历
-                begin:[2017,2,16], //可选开始日期
-                end:[2019,2,16], //可选结束日期
-                select(begin,end){
-                    // console.log(begin.toString(),end.toString());
-                }
-            },
-            calendar3:{
-                display:"2018/02/16",
-                show:false,
-                zero:true,
-                value:[2018,2,16], //默认日期
-                lunar:true, //显示农历
-                select:(value)=>{
-                    this.calendar3.show=false;
-                    this.calendar3.value=value;
-                    this.calendar3.display=value.join("/");
-                }
-            },
-            calendar4:{
-                display:"2018/02/16 ~ 2019/02/16",
-                show:false,
-                range:true,
-                zero:true,
-                value:[[2018,2,16],[2019,2,16]], //默认日期
-                lunar:true, //显示农历
-                select:(begin,end)=>{
-                    console.log(begin,end)
-                    this.calendar4.show=false;
-                    this.calendar4.value=[begin,end];
-                    this.calendar4.display=begin.join("/")+" ~ "+end.join("/");
-                }
-            },
-            // 多选
-            calendar5:{
-                display:"2017/11/2,2017/12/2",
-                multi:true,
-                show:false,
-                zero:true,
-                value:[[2017,11,1],[2017,11,2]], //默认日期
-                disabled:[[2017,12,24],[2017,12,25]], //默认日期
-                lunar:true, //显示农历
-                select:(value)=>{
-                    let displayValue=[]
-                    value.forEach(v=>{
-                        displayValue.push(v[0]+"/"+(v[1])+"/"+v[2])
-                    })
-                    console.log(displayValue);
-                    this.calendar5.display=displayValue.join(",");
-                    // this.calendar5.show=false;
-                    this.calendar5.value=value;
-                    
-                }
-            },
+        //  startTime:"2021/10/01",
+        //  endTime:"2022/04/26",
+        //  numCount:"",
+        //  device:"",
+        startTime:store.state.screenObj.startTime,
+        endTime:store.state.screenObj.endTime,
+        numCount:store.state.screenObj.numCount,
+        device:store.state.screenObj.device,
       }
   },
   
   methods:{
-     imageLoad(){
-        //只需要发出一次就好
-        if(!this.isLoad){
-          this.$emit('swiperImageLoad');
-          this.isLoade=true;
-        }
-     }
+      //映射出vuex中的actions里submitScreen方法
+       ...mapActions(['submitScreen']),//在这里用这个后，可以在下面方法getScreen里直接调用
+       //this.submitScreen(obj).then(res=>{console.log(res) })了,不写这个的话需要// this.$store.dispatch('submitScreen',obj).then(res=>{
+        //   console.log(res)
+        // })
+
+    //得到筛选后的数据
+     getScreen(){
+         // 1.创建对象
+        const obj = {}
+        // 2.对象信息
+        obj.startTime = this.startTime;
+        obj.endTime = this.endTime;
+        obj.numCount = this.numCount;
+        obj.device = this.device;
+        //将信息提交到vuex里
+        this.submitScreen(obj).then(res=>{
+            //console.log(res)
+        })
+       this.hideScreen();
+     },
+     //刷选数据后 更新会议室列表 事件发送给父组件-侧边栏隐藏
+     hideScreen(){
+          this.$emit('homeHideScreen');
+    }
   }
 }
 </script>
@@ -165,58 +121,50 @@ export default {
     z-index: 1;
     width: 100%;
 }
-.commonTime {
-    height: 40px;
-    line-height: 40px;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+.commonP{
+    height: 50px;
+    line-height: 50px;
+    /* border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc; */
     margin-top: 10px;
     margin-bottom: 10px;
     font-size:14px;
+    position:relative;
 }
-.commonSelectTime {
-    float: left;
-    margin-left: 10px;
-}
-.selectBtn {
-    float: right;
-    margin-right: 10px;
-}
-.icon {
-    width: 20px;
-    float: right;
-    margin: 0!important;
-    margin-top: 10px!important;
-}
-#selectNumCount {
-    margin: 0;
+.commonP input{
+    height:90%;
+    position:absolute;
+    top:5%;
     padding: 0px 10px;
     line-height: 20px;
     font-size: 14px;
     display: block;
-    height: 100%;
+    box-sizing: border-box
+}
+.p1 input{
+    width:90%;
+    left:5%;
+}
+/* .selectBtn {
     float: right;
     margin-right: 10px;
-    width: 100px;
-    border: none;
-    text-align: right;
-}
+} */
+/* .icon {
+    width: 20px;
+    float: right;
+    margin: 0!important;
+    margin-top: 10px!important;
+} */
 .selectDevice {
     color: #8f8f94;
     font-size: 14px;
 }
 #selectDevice {
-    margin: 0;
-    padding: 0px 10px;
-    line-height: 20px;
-    font-size: 14px;
-    display: block;
-    height: 100%;
-    float: right;
-    margin-right: 10px;
     width: 150px;
-    border: none;
     text-align: right;
+    right:5%;
+    border:none;
+    border:1px solid #ccc;
 }
 .bottomBtn {
     position: absolute;

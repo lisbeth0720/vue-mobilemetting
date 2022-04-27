@@ -14,9 +14,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'//导入路由
+import store from './store'//导入vuex
 
 createApp(App).config.productionTip = false
 
-createApp(App).use(router).mount("#app")
-
-//createApp(App).use(router).use(store).mount("#app")
+createApp(App).use(router).use(store).mount("#app")

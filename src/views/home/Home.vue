@@ -9,17 +9,11 @@
                      @scroll="contentScroll"
                      :pull-up-load="true"
                      @pulling-up="loadMore">
-          <home-swiper :banners="banners" />
-          <!-- <div @click="openScreen">
-             
-          </div> -->
-          <div>222222</div>
-          <div>222222</div>
-          <div>222222</div>
-          <div>222222</div>
-          <div>222222</div>
-          <button @click="nav=true">筛选</button>
-          <room-list :rooms="rooms"></room-list>
+          <home-swiper :banners="banners" 
+                       @swiper-image-load="swiperImageLoad"/>
+         <div @click="nav=true"
+				       class="screenBtn">筛选</div>
+          <room-list :rooms="rooms" class="room"></room-list>
           <ul>
             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
@@ -266,7 +260,8 @@
       <back-top @click.native="backTop" v-show="isShowBackTop"/>
       <div class="m-navbar" v-if="nav" @click="nav=false"></div>
       <transition name="nav">
-             <screen v-if="nav" class="m-navba"></screen>
+             <screen v-if="nav" class="m-navba"
+                     @home-hide-screen="homeHideScreen"></screen>
       </transition>
   </div>
 </template>
@@ -291,6 +286,9 @@
   //4.一些插件-下面的进行了封装
   //import emitter from "assets/utils/mitt.js"
 
+  import { useStore } from 'vuex'
+  import {mapGetters} from 'vuex'
+
   export default {
 		name: "Home",
     components: {
@@ -302,21 +300,41 @@
       Screen
     },
     data() {
+     const store = useStore()
+     //console.log(store)
 		  return {
         Ticket:"",
         MaxTicket:"",
         banners: [],
         rooms:[],
-        currentType: "pop",
+       
         isShowBackTop: false,
         tabOffsetTop: 0,
-        isTabFixed: false,
-        nav:false
-        
+       
+        nav:false,
+        screenStr:{
+            startTime:store.state.screenObj.startTime,
+            endTime:store.state.screenObj.endTime,
+            numCount:store.state.screenObj.numCount,
+            device:store.state.screenObj.device,
+        },
       }
     },
     computed: {
-		  
+		    ...mapGetters(['roomListObj']),
+       // roomListObj1(){
+         // return this.roomListObj;
+        //}
+    },
+    watch:{
+      //检测到vuex中的state发生了改变
+      // roomListObj1(newDate,oldDate){
+      //   console.log("改变值",newDate)
+      // }
+      //监听变量screenStr
+      screenStr(){
+        console.log("screenStr发生了改变")
+      }
     },
     activated(){
      
@@ -351,10 +369,12 @@
           this.banners = res.data.data
       })
       //得到会议室列表
-      getRoomList().then(res=>{
-          console.log(res)
-          this.rooms = res.data.data
-      })
+      // getRoomList().then(res=>{
+      //     //console.log(res)
+      //     this.rooms = res.data.data
+      // })
+      //this.roomList();
+      this.roomList(this.screenStr.startTime,this.screenStr.endTime,this.screenStr.numCount,this.screenStr.device)
     },
     mounted(){
       
@@ -364,6 +384,13 @@
        
     },
     methods: {
+      // 1.事件监听方法
+       swiperImageLoad (){
+        //只需要拿到一次就好-用$el的原因是因为this.$refs.tabControl是组件不能通过this.$refs.tabControl.offsetTop;来拿到值，组件需要加$el
+        //this.tabOffsetTop=this.$refs.tabControl.$el.offsetTop;
+        //console.log(this.tabOffsetTop)
+          this.$refs.scroll.refresh();
+      },
        contentScroll(position){
          //console.log(position)
          //1.判断BackTop是否显示
@@ -375,15 +402,30 @@
       loadMore() {//下拉加载更多
 		    
       },
+
       //判断是否回到顶部是否显示
       backTop(){
           this.$refs.scroll.scrollToTop(0,0);
       },
-      //弹出筛选框
-      openScreen(){
+      //点击确定按钮隐藏侧边栏
+      homeHideScreen(){
+        this.nav=false;
 
-      }
-
+        //更新筛选后的会议室列表
+        //console.log(this.startTime)
+         //this.roomList(this.startTime,this.endTime,this.numCount,this.device)
+      },
+       // 网络请求相关方法
+      roomList(start,end,count,device){
+        let page=1;
+         getRoomList(start,end,count,device,page).then(res=>{
+         // console.log(res)
+          page+=1;
+          this.rooms = res.data.data
+          //执行下面这个方法才能加载更多数据-//better-scroll默认只能加载更多一次
+          this.$refs.scroll.finishPullUp();
+         })
+      },
     }
 	}
 </script>
@@ -393,6 +435,7 @@
   #home {
     /*position: relative;*/
     height: 100vh;
+    background-color: #efeff4;
   }
 
   /* .nav-bar {
@@ -438,16 +481,16 @@
        height:calc(100% - 93px); 
        overflow:hidden;
     }
-   .tab-control{
-     /* position:sticky;
-     top:44px; */
-     position:relative;
-     z-index:9;
-   }
-   .v-enter,.v-leave-to{
-     transform: translateX(100%)
-   }
-
+  .screenBtn{
+     margin: 10px 0px;
+     background: #fff;
+     text-align: right;
+     padding-right: 10px;
+     line-height: 40px;
+  }
+  .room{
+    clear: both;
+  }
    .m-navbar{
     position: fixed;
     left:-3px;

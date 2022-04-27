@@ -61,14 +61,22 @@ export function getHomeSwiper(){
 }
 
 //得到会议室列表
-export function getRoomList(){
+export function getRoomList(start,end,count,device,page){
+    console.log(start)
     return request({
         // url:'api/room/get?rnd='+Math.random(999)*1000,
         url:'api/room/get',
-        //  params:{
-        //      type,
-        //      page
-        //  },
+         params:{
+            roomName:"",
+            //startTime:start==undefined?"":start,
+            startTime:start,
+            endTime:end,
+            sort:"",
+            pageSize:"10",
+            page:page,
+            deviceName:device,
+            contain:count
+         },
          headers:{
             "Authorization":TicketStr
         },
