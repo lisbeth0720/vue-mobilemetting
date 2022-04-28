@@ -1,6 +1,7 @@
 //vue-cli4的写法
 import {createRouter,createWebHashHistory} from 'vue-router'
 
+const Login =() =>import('../views/login/Login.vue');
 const Home =() =>import('../views/home/Home.vue');
 const Message =() =>import('../views/message/Message.vue');
 const Profile =() =>import('../views/profile/Profile.vue');
@@ -9,29 +10,41 @@ const Profile =() =>import('../views/profile/Profile.vue');
 const routes=[
    {
        path:'',
-       redirect:'/home'
+       redirect:'/login'
+   },
+   {
+       path:'/login',
+       component:Login,
+       meta:{
+         keepAlive:true//组件需要缓存
+       },
+       name:"login"
    },
    {
     path:'/home',
     component:Home,
     meta:{
       keepAlive:true//组件需要缓存
-    }
+    },
+    name:"home"
   },
    {
     path:'/message',
     component:Message,
     meta:{
       keepAlive:true//组件需要缓存
-    }
+    },
+    name:"message"
   },
   {
     path:'/profile',
     component:Profile,
     meta:{
       keepAlive:true//组件需要缓存
-    }
+    },
+    name:"profile"
   }
+ 
 ]
 
 const router = createRouter({

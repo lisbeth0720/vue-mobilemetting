@@ -11,257 +11,16 @@
                      @pulling-up="loadMore">
           <home-swiper :banners="banners" 
                        @swiper-image-load="swiperImageLoad"/>
-         <div @click="nav=true"
+        
+          <div @click="clickScreen"
 				       class="screenBtn">筛选</div>
-          <room-list :rooms="rooms" class="room"></room-list>
-          <ul>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-            <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-             <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-              <li>肖战啊啊啊啊啊啊啊啊啊啊1</li>
-          </ul>
+          <room-list :rooms="rooms" class="room" />
       </better-scroll>
       <back-top @click.native="backTop" v-show="isShowBackTop"/>
       <div class="m-navbar" v-if="nav" @click="nav=false"></div>
       <transition name="nav">
              <screen v-if="nav" class="m-navba"
-                     @home-hide-screen="homeHideScreen"></screen>
+                     @confirm-screen="getConfirmScreen" />
       </transition>
   </div>
 </template>
@@ -279,7 +38,7 @@
   import Screen from './childComps/Screen.vue'
   
   //3.一些方法
-  import {getTocken,getMaxTicket,getHomeSwiper,getRoomList} from "network/home.js";
+  import {getHomeSwiper,getRoomList} from "network/home.js";
   //import {debounce} from "common/utils.js";
  //import {itemListenerMixin} from "common/mixin.js";
 
@@ -299,12 +58,22 @@
       BackTop,
       Screen
     },
+    setup(){
+      const store = useStore();
+       //  const state = computed(()=>{
+       //    return store.state
+       //  })
+       //返回出去供template模板使用,那么在script里怎么使用呢？
+       return {
+          store
+       }
+    },
     data() {
-     const store = useStore()
-     //console.log(store)
+      const store = useStore();
 		  return {
-        Ticket:"",
-        MaxTicket:"",
+        Ticket:store.state.login.Ticket,
+        MaxTicket:store.state.login.MaxTicket,
+
         banners: [],
         rooms:[],
        
@@ -312,29 +81,14 @@
         tabOffsetTop: 0,
        
         nav:false,
-        screenStr:{
-            startTime:store.state.screenObj.startTime,
-            endTime:store.state.screenObj.endTime,
-            numCount:store.state.screenObj.numCount,
-            device:store.state.screenObj.device,
-        },
       }
     },
     computed: {
-		    ...mapGetters(['roomListObj']),
-       // roomListObj1(){
-         // return this.roomListObj;
-        //}
+		    //...mapGetters(['roomListObj']),
     },
     watch:{
-      //检测到vuex中的state发生了改变
-      // roomListObj1(newDate,oldDate){
-      //   console.log("改变值",newDate)
-      // }
-      //监听变量screenStr
-      screenStr(){
-        console.log("screenStr发生了改变")
-      }
+     
+      
     },
     activated(){
      
@@ -343,38 +97,10 @@
      
     },
     created() {
-      //得到短Token
-      getTocken().then(res=>{
-         if(res.code=="0"){
-				   this.Ticket=res.data.Ticket;
-				   this.MaxTicket=res.data.MaxTicket;
-				   localStorage.setItem('Ticket',this.Ticket);
-				   localStorage.setItem('MaxTicket',this.MaxTicket);
-				   //localStorage.setItem('username',this.username);
-			  }
-      })
-      //得到长Token
-      getMaxTicket().then(res=>{
-        if(res.code=="0"){
-			   	return "0";
-		   	}else if(res.code=="30007"){
-			   	//window.location.href="../login.html";
-		  	}else{
-				  //window.location.href="../login.html";
-		  	}
-      })
-
-     //得到首页轮播数据
-      getHomeSwiper().then(res => {
-          this.banners = res.data.data
-      })
-      //得到会议室列表
-      // getRoomList().then(res=>{
-      //     //console.log(res)
-      //     this.rooms = res.data.data
-      // })
-      //this.roomList();
-      this.roomList(this.screenStr.startTime,this.screenStr.endTime,this.screenStr.numCount,this.screenStr.device)
+      //1得到首页轮播数据
+      this.getSwiper()
+      //2.得到会议室列表
+      this.roomList(this.Ticket)
     },
     mounted(){
       
@@ -407,23 +133,41 @@
       backTop(){
           this.$refs.scroll.scrollToTop(0,0);
       },
-      //点击确定按钮隐藏侧边栏
-      homeHideScreen(){
-        this.nav=false;
-
-        //更新筛选后的会议室列表
-        //console.log(this.startTime)
-         //this.roomList(this.startTime,this.endTime,this.numCount,this.device)
+      //点击筛选
+      clickScreen(){
+         this.nav=true;
       },
-       // 网络请求相关方法
-      roomList(start,end,count,device){
+      //子组件传过来的事件-点击"确定"按钮隐藏侧边栏,并且会议室列表发生改变重新渲染数据
+      getConfirmScreen(data){//val是子组件传过来的参数值
+        this.nav=false;
+        console.log("父组件接收事件")
+        //console.log(data) //data是子组件传过来的值
+        //更新筛选后的会议室列表
+        this.rooms = data
+      },
+       // 2.网络请求相关方法
+       //2.1 得到首页轮播数据
+       getSwiper(){
+         getHomeSwiper().then(res => {
+          this.banners = res.data.data
+        })
+       },
+       //2.2 得到会议室列表
+      roomList(Token,start,end,count,device){
         let page=1;
-         getRoomList(start,end,count,device,page).then(res=>{
-         // console.log(res)
-          page+=1;
-          this.rooms = res.data.data
-          //执行下面这个方法才能加载更多数据-//better-scroll默认只能加载更多一次
-          this.$refs.scroll.finishPullUp();
+         getRoomList(Token,start,end,count,device,page).then(res=>{
+           if(res.code=="0"){
+              page+=1;
+              this.rooms = res.data.data
+              //执行下面这个方法才能加载更多数据-//better-scroll默认只能加载更多一次
+              this.$refs.scroll.finishPullUp();
+           }else if(res.code=="30001"){//无效token、无权限//跳转到登陆页
+					      this.$router.push("/login"); 
+           }else if(data.code=="30006"){
+							 //getMaxTicket();
+						}else{
+							//alert(data.message);
+						}
          })
       },
     }

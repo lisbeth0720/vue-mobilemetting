@@ -20,7 +20,8 @@
      </keep-alive>
      <component :is="Component" v-if="!route.meta.keepAlive"/>
    </router-view>
-    <main-tab-bar></main-tab-bar>
+   <!-- 如何实现在登陆页不显示下班的tab-bar 我用的在tab-bar中,一开始不显示，只要检测到登陆成功了就显示tab-bar 但是这样有个bug 就是界面还没跳转 底部的导航就已经在登陆页显示了 -->
+    <main-tab-bar v-if="tabType"></main-tab-bar>
   </div>
 </template>
 
@@ -31,6 +32,20 @@ export default {
   name: 'App',
   components: {//在components里注册组件后才能在模板里使用
    MainTabBar,
+  },
+  data(){
+    return{
+       tabType:true
+    }
+  },
+  watch:{//为了检测路由$route的变化,可以获取跳转到的路由信息,通过 路由的name值进行判断即可
+      $route(e){
+        if(e.name=="login"){//登陆页不显示tab-bar
+          this.tabType=false;
+        }else{
+          this.tabType=true;
+        }
+      }
   }
 }
 </script>

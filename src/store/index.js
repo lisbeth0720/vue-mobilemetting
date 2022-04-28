@@ -24,12 +24,12 @@ import getters from './getters.js'
 import actions from './actions.js'
 import modules from './modules.js'
 const state = {
-    screenObj: {
-        startTime:"",
-        endTime:"",
-        numCount:"",
-        device:""
-    }
+    login:{
+        Ticket:"",
+        MaxTicket:"",
+        username:"",
+    },
+
 };
 //vue3x的写法
 import { createStore } from 'vuex'
