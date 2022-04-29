@@ -27,9 +27,9 @@ export function getHomeSwiper(){
 export function getRoomList(Ticket,start,end,count,device,page){
     //console.log(Ticket)
     //为了能很好的实现其他界面，不用刷新就重新登录，先把信息存到localStorage
-    if(Ticket==""){
-        Ticket=localStorage.getItem("Ticket");
-    }
+    // if(Ticket==""){
+    //     Ticket=localStorage.getItem("Ticket");
+    // }
     return request({
         // url:'api/room/get?rnd='+Math.random(999)*1000,
         url:'api/room/get',

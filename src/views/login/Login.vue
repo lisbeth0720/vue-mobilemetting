@@ -65,7 +65,7 @@
   import {mapActions} from 'vuex'
   
   //3.一些方法
-  import {getCompanyId,userLogin,getTocken,getMaxTicket} from "network/login.js";
+  import {getCompanyId,getTocken,getMaxTicket} from "network/login.js";
 
 
   export default {
@@ -94,12 +94,13 @@
     created() {
         //1.单位号
         this.getLoginCompanyId()
-
+        
+		//下面俩方法需要登陆后才访问
         //2.得到短Token
-        this.getLoginTocken()
+        //this.getLoginTocken()
 
         //3.得到长Token
-        this.getLoginMaxTicket()
+       // this.getLoginMaxTicket()
 
 		//登录页不显示底部的导航
 
@@ -111,44 +112,21 @@
       // 1.事件监听方法
 	  //1.1取到actions里的submitLogin方法
       ...mapActions(['submitLogin']),
+
 	  //1.2检测单位号是否发生改变
       companyChange(){
           this.companyid=document.querySelector("#companyID").value;
 	  },
+
       //1.3登陆
       login(){
         //var companyid=document.querySelector("#companyID").value;
 		console.log(this.companyid,this.username,this.pwd)
-        userLogin(this.companyid,this.username,this.pwd).then(res=>{
-          if(res.code=="0"){
-                this.Ticket=res.data.Ticket;
-		 		this.MaxTicket=res.data.MaxTicket;
-				 //为了能很好的实现其他界面，不用刷新就重新登录，先把信息存到localStorage
-		 		localStorage.setItem('Ticket',this.Ticket);
-		 		localStorage.setItem('MaxTicket',this.MaxTicket);
-		 		localStorage.setItem('username',this.username);
-                    
-                // 1.创建对象
-                const obj = {}
-                // 2.对象信息
-                obj.Ticket = this.Ticket;
-                obj.MaxTicket = this.MaxTicket;
-                obj.username = this.username;
-                 //将信息提交到vuex里
-                this.submitLogin(obj).then(res=>{
-                    //console.log(res)
-                })
-				//跳转到主页
-				this.$router.push("/home"); 
-		   	}else if(res.code=="30007"){
-			   this.$router.push("/home"); 
-		  	}else{
-				this.$router.push("/login"); 
-		  	}
-        })
+        this.getLoginTocken(this.companyid,this.username,this.pwd)
       },
      
       // 2.网络请求相关方法
+	  
 	   //2.1得到单位号
       getLoginCompanyId(){//获取单位号
           getCompanyId().then(res=>{
@@ -167,18 +145,40 @@
 			// 	}	 
          }) 
       },
+
       //2.2得到短Token
-      getLoginTocken(){
-        getTocken().then(res=>{
-           if(res.code=="0"){
-				this.Ticket=res.data.Ticket;
-				this.MaxTicket=res.data.MaxTicket;
-				localStorage.setItem('Ticket',this.Ticket);
-				localStorage.setItem('MaxTicket',this.MaxTicket);
-				//localStorage.setItem('username',this.username);
-			}
+      getLoginTocken(companyid,username,pwd){
+        getTocken(companyid,username,pwd).then(res=>{
+			if(res.code=="0"){
+                this.Ticket=res.data.Ticket;
+		 		this.MaxTicket=res.data.MaxTicket;
+				 console.log(this.Ticket)
+				 //为了能很好的实现其他界面，不用刷新就重新登录，先把信息存到localStorage
+		 		//localStorage.setItem('Ticket',this.Ticket);
+		 		//localStorage.setItem('MaxTicket',this.MaxTicket);
+		 		//localStorage.setItem('username',this.username);
+
+                // 1.创建对象
+                const obj = {}
+                // 2.对象信息
+                obj.Ticket = this.Ticket;
+                obj.MaxTicket = this.MaxTicket;
+                obj.username = this.username;
+                 //将信息提交到vuex里
+                this.submitLogin(obj).then(res=>{
+                    //console.log(res)
+                })
+				//跳转到主页
+				this.$router.push("/home"); 
+		   	}else if(res.code=="30007"){
+			   this.$router.push("/login"); 
+		  	}else{
+				this.$router.push("/login"); 
+		  	}
+        
         })
       },
+
       //2.3得到长Token
       getLoginMaxTicket(){
         getMaxTicket().then(res=>{

@@ -1,0 +1,27 @@
+{
+    "success": true,
+    "message": "成功",
+    "code": "0",
+    "data": [
+        {
+            "companyID": "ceshi1",
+            "companyName": "国新投资有限公司1"
+        },
+        {
+            "companyID": "ceshi123",
+            "companyName": "测试单位号"
+        },
+        {
+            "companyID": "CHRCHY",
+            "companyName": "慧峰科技"
+        },
+        {
+            "companyID": "meeting",
+            "companyName": "会议预约"
+        },
+        {
+            "companyID": "wisepeak",
+            "companyName": "wisepeak"
+        }
+    ]
+}

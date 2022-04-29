@@ -1,47 +1,41 @@
 <template>
-    <div class="roomList">
-         <!-- v-for后面添加:key='item' 不然报错 -->
-        <div v-for="item in rooms" :key='item' class="roomList-item">
-         <!-- 用变量里的属性需要加冒号 -->
-            <!-- <a :href="item.link"> -->
-             <div class="item-left">
-                 <img src="~/assets/img/common/default.jpg" />
-                 <span class="roomStatus">{{getRoomStatus(item.Status)}}</span>
-                <!-- <img v-if="item.Picture" :src="item.Picture" />
-                <img else :src="pictureUrl"/> -->
-             </div>
-             <ul class="item-right">
-                    <li>
-                        <span class="roomName">{{item.RoomName}}</span>
-                        <span class="count">&nbsp;坐席{{item.Contain}}人</span>
-                    </li>
-                    <li>
-                        <span class="addressDesc">会议室地点:</span>
-                        <span class="address">{{item.MeetingAddress}}</span>
-                    </li>
-                    <li>
-                        <span class="device">
-                             <i v-for="deviceItem in item.deviceList" :key="deviceItem">{{deviceItem.deviceName}}</i>
-                            <!-- 设备多余5个的暂时就不显示 -->
-                            <!-- <i v-for="deviceItem in item.deviceList" :key="deviceItem" v-if="item.deviceList.length<5">{{deviceItem.deviceName}}</i> -->
-                            
-                        </span>
-                    </li>
-                </ul>
-           
-             <!-- </a> -->
+  <div class="room-item" @click="roomItemClick">
+    <div class="room-item-div">
+         <div class="item-left">
+            <img src="~/assets/img/common/default.jpg" />
+            <span class="roomStatus">{{getRoomStatus(roomItem.Status)}}</span>
+             <!-- <img v-if="roomItem.Picture" :src="roomItem.Picture" />
+            <img else :src="pictureUrl"/> -->
         </div>
+        <ul class="item-right">
+             <li>
+                <span class="roomName">{{roomItem.RoomName}}</span>
+                 <span class="count">&nbsp;坐席{{roomItem.Contain}}人</span>
+            </li>
+            <li>
+                <span class="addressDesc">会议室地点:</span>
+                <span class="address">{{roomItem.MeetingAddress}}</span>
+            </li>
+             <li>
+                <span class="device">
+                     <i v-for="deviceItem in roomItem.deviceList" :key="deviceItem">{{deviceItem.deviceName}}</i>
+                        <!-- 设备多余5个的暂时就不显示 -->
+                         <!-- <i v-for="deviceItem in roomsItem.deviceList" :key="deviceItem" v-if="roomsItem.deviceList.length<5">{{deviceItem.deviceName}}</i> -->            
+                </span>
+            </li>
+        </ul>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'RoomList',
+  name: 'RoomItem',
   props:{
-     rooms:{
-         type:Array,
+     roomItem:{
+         type:Object,
          default(){
-           return []
+           return {}
          }
      }
   },
@@ -52,8 +46,6 @@ export default {
   },
   computed(){
     
-    
-     
   },
   methods:{
       //得到会议室状态
@@ -71,24 +63,27 @@ export default {
             roomStatus = "预留";
         }
         return roomStatus;
-     }   
+     },
+     //点击会议室跳转到预约会议界面，进行预约会议
+     roomItemClick(){
+        //跳转到预约会议页
+		this.$router.push("/order");
+     } 
   }
 }
 </script>
 
 <style>
-   .roomList{
-       width:100%;
-       border-bottom: 8px solid #eee;
-       background-color: #fff;
+   .room-item{
+       height:90px;
+       border-bottom:1px solid #c8c7cc;
    }
-   .roomList-item{
-       /* flex:1; */
+   .room-item-div{
+       width:100%;
+       height:100%;
+       display:flex;
        font-size:12px;
        text-align: center;
-       height:90px;
-       display:flex;
-       border-bottom:1px solid #c8c7cc;
    }
    .item-left{
        width:70px;

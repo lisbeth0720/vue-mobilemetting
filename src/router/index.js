@@ -3,6 +3,7 @@ import {createRouter,createWebHashHistory} from 'vue-router'
 
 const Login =() =>import('../views/login/Login.vue');
 const Home =() =>import('../views/home/Home.vue');
+const Order =() =>import('../views/order/Order.vue');
 const Message =() =>import('../views/message/Message.vue');
 const Profile =() =>import('../views/profile/Profile.vue');
 
@@ -27,6 +28,14 @@ const routes=[
       keepAlive:true//组件需要缓存
     },
     name:"home"
+  },
+  {
+    path:'/order',
+    component:Order,
+    meta:{
+      keepAlive:true//组件需要缓存
+    },
+    name:"order"
   },
    {
     path:'/message',

@@ -1,7 +1,7 @@
 <template>
   <div id="home">
       <nav-bar class="home-nav">
-        <template v-slot:center><div>首页</div></template>
+        <template v-slot:center><div>会议室</div></template>
       </nav-bar> 
       <better-scroll class="content" 
                      ref="scroll" 
@@ -30,15 +30,17 @@
   import NavBar from 'components/common/navbar/NavBar.vue'
   import BetterScroll from 'components/common/scroll/BetterScroll.vue'
   import BackTop from 'components/content/backTop/BackTop.vue'
+  import RoomList from 'components/content/rooms/RoomList.vue'
   import {BACK_POSITION} from 'common/const.js'
-
+ 
  //2.子组件
   import HomeSwiper from './childComps/HomeSwiper.vue'
-  import RoomList from './childComps/RoomList.vue'
+  //import RoomList from './childComps/RoomList.vue'
   import Screen from './childComps/Screen.vue'
   
   //3.一些方法
   import {getHomeSwiper,getRoomList} from "network/home.js";
+  import {getMaxTicket} from "network/login.js";
   //import {debounce} from "common/utils.js";
  //import {itemListenerMixin} from "common/mixin.js";
 
@@ -156,20 +158,27 @@
       roomList(Token,start,end,count,device){
         let page=1;
          getRoomList(Token,start,end,count,device,page).then(res=>{
+           console.log(res)
            if(res.code=="0"){
               page+=1;
               this.rooms = res.data.data
               //执行下面这个方法才能加载更多数据-//better-scroll默认只能加载更多一次
               this.$refs.scroll.finishPullUp();
            }else if(res.code=="30001"){//无效token、无权限//跳转到登陆页
-					      this.$router.push("/login"); 
-           }else if(data.code=="30006"){
-							 //getMaxTicket();
+					    this.$router.push("/login"); 
+           }else if(res.code=="30006"){//授权到期，重新得到MaxToken
+               //this.homeGetMaxTicket(this.MaxTicket)
+               this.$router.push("/login"); 
 						}else{
 							//alert(data.message);
 						}
          })
       },
+      homeGetMaxTicket(MaxTicket){
+           getMaxTicket(MaxTicket).then(res=>{
+                 console.log(res)
+            })
+      }  
     }
 	}
 </script>

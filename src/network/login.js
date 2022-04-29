@@ -23,39 +23,37 @@ export function getCompanyId(){
         url:'api/users/getcompanyList',
     })
 }
-//2.登陆
-export function userLogin(companyid,username,password){
+//2.登陆-得到短Token
+export function getTocken(companyid,username,password){
     return request({
         url:'api/users/gettokenbyjwt/v2',
         params:{
-            companyid,
-            username,
-            password
-            // companyid:"CHRCHY",
-			// username:"administrator",
-			// password:"admin@123"
+            companyid:companyid,
+ 			username:username,
+ 			password:password
         }
     })
 }
 
-//3.得到短Tocken
-export function getTocken(){
-    return request({
-        url:'api/users/gettokenbyjwt/v2',
-        params:{
-            companyid:"CHRCHY",
-			username:"administrator",
-			password:"admin@123"
-        }
-    })
-}
-//4.得到长Tocken
-export function getMaxTicket(){
+//2.得到短Tocken
+// export function getTocken(){
+//     return request({
+//         url:'api/users/gettokenbyjwt/v2',
+//         params:{
+//             companyid:"CHRCHY",
+// 			username:"administrator",
+// 			password:"admin@123"
+//         }
+//     })
+// }
+//3.得到长Tocken
+export function getMaxTicket(MaxTicket){
 	//this.maxTicket="Bearer "+localStorage.getItem("MaxTicket");
     return request({
         url:'api/users/gettokenbyTicket/v2',
         params:{
-            token:"Bearer "+localStorage.getItem("MaxTicket")
+            //token:"Bearer "+localStorage.getItem("MaxTicket")
+            token:"Bearer "+MaxTicket
         }
     })
 }

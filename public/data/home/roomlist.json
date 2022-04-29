@@ -1,0 +1,158 @@
+{
+    "success": true,
+    "message": "成功",
+    "code": "0",
+    "data": {
+        "page": 1,
+        "pageCount": 1,
+        "dataCount": 5,
+        "PageSize": 10,
+        "data": [
+            {
+                "ID": 1036,
+                "CompanyID": "CHRCHY",
+                "RoomName": "第一会议室",
+                "Status": 0,
+                "MeetingAddress": "",
+                "Picture": "../File/20210813090942伊利.jpg",
+                "Contain": 0,
+                "RoomArea": 0,
+                "DeviceCount": 0,
+                "OrderList": [],
+                "deviceList": [
+                    {
+                        "deviceID": 4214,
+                        "deviceName": "门"
+                    },
+                    {
+                        "deviceID": 6272,
+                        "deviceName": "桌牌"
+                    },
+                    {
+                        "deviceID": 6273,
+                        "deviceName": "麦克风"
+                    }
+                ]
+            },
+            {
+                "ID": 3036,
+                "CompanyID": "CHRCHY",
+                "RoomName": "网络培训会议室",
+                "Status": 0,
+                "MeetingAddress": "",
+                "Picture": "/Meeting/Mobile/leadace/assets/skin/blue/images/one.jpg",
+                "Contain": 0,
+                "RoomArea": 0,
+                "DeviceCount": 0,
+                "OrderList": [],
+                "deviceList": [
+                    {
+                        "deviceID": 6249,
+                        "deviceName": "座椅1"
+                    },
+                    {
+                        "deviceID": 6250,
+                        "deviceName": "座椅2"
+                    },
+                    {
+                        "deviceID": 6251,
+                        "deviceName": "座椅3"
+                    },
+                    {
+                        "deviceID": 6252,
+                        "deviceName": "座椅4"
+                    },
+                    {
+                        "deviceID": 6253,
+                        "deviceName": "座椅5"
+                    },
+                    {
+                        "deviceID": 6254,
+                        "deviceName": "座椅6"
+                    },
+                    {
+                        "deviceID": 6255,
+                        "deviceName": "座椅7"
+                    },
+                    {
+                        "deviceID": 6256,
+                        "deviceName": "座椅8"
+                    },
+                    {
+                        "deviceID": 6257,
+                        "deviceName": "座椅9"
+                    },
+                    {
+                        "deviceID": 6258,
+                        "deviceName": "座椅10"
+                    },
+                    {
+                        "deviceID": 6259,
+                        "deviceName": "门禁"
+                    },
+                    {
+                        "deviceID": 6271,
+                        "deviceName": "menjin"
+                    }
+                ]
+            },
+            {
+                "ID": 4036,
+                "CompanyID": "CHRCHY",
+                "RoomName": "第三会议室",
+                "Status": 1,
+                "MeetingAddress": "",
+                "Picture": "/Meeting/Mobile/leadace/assets/skin/blue/images/one.jpg",
+                "Contain": 0,
+                "RoomArea": 0,
+                "DeviceCount": 0,
+                "OrderList": [],
+                "deviceList": []
+            },
+            {
+                "ID": 4037,
+                "CompanyID": "CHRCHY",
+                "RoomName": "B3大会议室",
+                "Status": 0,
+                "MeetingAddress": "总部A座5层",
+                "Picture": "../File/20210813092855石化盈科.jpg",
+                "Contain": 100,
+                "RoomArea": 200,
+                "DeviceCount": 0,
+                "OrderList": [],
+                "deviceList": [
+                    {
+                        "deviceID": 6274,
+                        "deviceName": "桌牌"
+                    },
+                    {
+                        "deviceID": 6275,
+                        "deviceName": "投影"
+                    },
+                    {
+                        "deviceID": 6276,
+                        "deviceName": "麦克风"
+                    }
+                ]
+            },
+            {
+                "ID": 4041,
+                "CompanyID": "CHRCHY",
+                "RoomName": "111",
+                "Status": 0,
+                "MeetingAddress": "",
+                "Picture": "/Meeting/Mobile/leadace/assets/skin/blue/images/one.jpg",
+                "Contain": 0,
+                "RoomArea": 0,
+                "DeviceCount": 0,
+                "OrderList": [],
+                "deviceList": [
+                    {
+                        "deviceID": 6281,
+                        "deviceName": "222"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "message": "成功",
+    "code": "0",
+    "data": {
+        "Ticket": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhZG1pbmlzdHJhdG9yIiwiZXhwIjoxNjUxMjA2NjU5LCJzdWIiOiJKV1RtaW4iLCJhdWQiOiJhZG1pbmlzdHJhdG9yIiwiaWF0IjoiMjAyMi80LzI5IDEwOjMwOjU5IiwiZGF0YSI6eyJuYW1lIjoi5Y2V5L2N6LaF57qn566h55CG5ZGYIiwidXNlcmNvbXBhbnlpZCI6IkNIUkNIWSIsInVzZXJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbmlzdHJhdG9yIiwiZGVwdE5hbWUiOiLlhazlj7giLCJkZXB0SUQiOjM5fX0.IzKqBvpN93P6RAaL2TVqfGfBSdheiy2YlW0YVlLZMYE",
+        "MaxTicket": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhZG1pbmlzdHJhdG9yIiwiZXhwIjoxNjUyNDk1NDU5LCJzdWIiOiJKV1RtYXgiLCJhdWQiOiJhZG1pbmlzdHJhdG9yIiwiaWF0IjoiMjAyMi80LzI5IDEwOjMwOjU5IiwiZGF0YSI6eyJuYW1lIjoi5Y2V5L2N6LaF57qn566h55CG5ZGYIiwidXNlcmNvbXBhbnlpZCI6IkNIUkNIWSIsInVzZXJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbmlzdHJhdG9yIiwiZGVwdE5hbWUiOiLlhazlj7giLCJkZXB0SUQiOjM5fX0.DtypXXT36VN0GRD-CKLKsdHOCkPscqXpLN-AOmC_dBE"
+    }
+}
