@@ -12,6 +12,44 @@
 			<room-list-item :room-item="roomItem"/>
 			<meeting-detail />
 			<meeting-time-table />
+			<div id="submitBtn">
+		         <button type="button" 
+                         class="commSubmitBtn activeBtn" 
+                         id="submitOrderBtn" 
+                         @click="submitOrder()">确认</button>
+		         <button type="button" 
+                         class="commSubmitBtn" 
+                         id="backOrderBtn" 
+                         @click="resetOrderPage()">重置</button>
+	         </div>
+			 <ul>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+				 <li>111111111111111111111</li>
+			 </ul>
 	  </better-scroll>
   </div>
 </template>
@@ -88,5 +126,36 @@
 }
 </script>
 <style scoped>
-
+   #submitBtn {
+    text-align: center;
+  }
+   .commSubmitBtn {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    cursor: pointer;
+    -webkit-transition: all;
+    transition: all;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    text-align: center;
+    vertical-align: top;
+    white-space: nowrap;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: #fff;
+    background-clip: padding-box;
+	margin-left:5px;
+}
 </style>

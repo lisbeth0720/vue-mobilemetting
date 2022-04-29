@@ -128,10 +128,12 @@
 				</a>
 			</div>
 		</li>
-		<li style="height:100px;">
+		<li style="height:100px;border:none;">
 			<div class="mt-row">
 				<label>其他需求</label>
-				<textarea id="specialText" type="text" class="input-clear" placeholder="定制化服务填写" style="width:100%;font-size:14px;padding: 10px;box-sizing: border-box;"></textarea>
+				<textarea id="specialText" 
+                          type="text" class="input-clear" 
+                          placeholder="定制化服务填写" ></textarea>
 			</div>
 		</li>
 	</ul>
@@ -259,5 +261,21 @@
     box-sizing: border-box;
     width: 100px;
     margin-right: 20px;
+}
+#selectMeetingDevice {
+    color: #fff;
+    background: #0075ff;
+    margin-top: 5px;
+    height: 30px;
+    box-sizing: border-box;
+    width: 100px;
+    margin-right: 20px;
+}
+.mt-row textarea{
+    width:100%;
+    font-size:14px;
+    padding: 10px;
+    box-sizing: border-box;
+    border:0;
 }
 </style>
