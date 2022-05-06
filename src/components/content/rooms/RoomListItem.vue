@@ -67,7 +67,7 @@ export default {
      //点击会议室跳转到预约会议界面，进行预约会议
      roomItemClick(){
         //跳转到预约会议页
-		this.$router.push("/order");
+		this.$router.push("/order/"+this.roomItem.ID);
      } 
   }
 }

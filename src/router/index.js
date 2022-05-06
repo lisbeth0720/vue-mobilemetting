@@ -30,10 +30,10 @@ const routes=[
     name:"home"
   },
   {
-    path:'/order',
+    path:'/order/:id',
     component:Order,
     meta:{
-      keepAlive:true//组件需要缓存
+      keepAlive:false//组件不需要缓存
     },
     name:"order"
   },

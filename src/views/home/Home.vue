@@ -15,6 +15,113 @@
           <div @click="clickScreen"
 				       class="screenBtn">筛选</div>
           <room-list :rooms="rooms" class="room" />
+          <ul>
+            <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+             <li>肖战啊啊啊啊</li>
+              <li>肖战啊啊啊啊</li>
+          </ul>
       </better-scroll>
       <back-top @click.native="backTop" v-show="isShowBackTop"/>
       <div class="m-navbar" v-if="nav" @click="nav=false"></div>
@@ -120,7 +227,7 @@
           this.$refs.scroll.refresh();
       },
        contentScroll(position){
-         //console.log(position)
+         console.log(position)
          //1.判断BackTop是否显示
          this.isShowBackTop=(-position.y)>BACK_POSITION;
 
@@ -145,7 +252,7 @@
         console.log("父组件接收事件")
         //console.log(data) //data是子组件传过来的值
         //更新筛选后的会议室列表
-        this.rooms = data
+        console.log(data)
       },
        // 2.网络请求相关方法
        //2.1 得到首页轮播数据
@@ -162,6 +269,8 @@
            if(res.code=="0"){
               page+=1;
               this.rooms = res.data.data
+              //不能滚动，加刷新试下
+              this.$refs.scroll.refresh();
               //执行下面这个方法才能加载更多数据-//better-scroll默认只能加载更多一次
               this.$refs.scroll.finishPullUp();
            }else if(res.code=="30001"){//无效token、无权限//跳转到登陆页
@@ -224,14 +333,14 @@
 
    .content {
      /* 上下两部分高度已定，计算中间部分的高度，两种方式，1.用calc属性；2，使用定位 top,bottom给个值,left,right=0*/
-      /* position: absolute;
+      position: absolute;
       top: 44px; 
       bottom: 49px;
       left: 0;
-      right: 0; */
+      right: 0;
        /* margin-top:44px;  */
        /* calc(100%-93px)不加空格无效 */ 
-       height:calc(100% - 93px); 
+       /* height:calc(100% - 93px);  */
        overflow:hidden;
     }
   .screenBtn{
@@ -243,6 +352,7 @@
   }
   .room{
     clear: both;
+    
   }
    .m-navbar{
     position: fixed;

@@ -17,7 +17,7 @@
               <div>会议室</div>
          </template>
       </tab-bar-item>
-      <tab-bar-item path="/category" activeColor="#007aff">
+      <tab-bar-item path="/message" activeColor="#007aff">
          <template v-slot:item-icon>
              <img src="~/assets/img/tabbar/message.png" alt="" />
          </template>

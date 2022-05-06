@@ -18,7 +18,6 @@
 				<li class="time21">21:00</li>
 				<li class="time22">22:00</li>
 			</ul>
-
 		</div>
 		<div id="meetingContent">
 			<ul id="meetingContentBlockUl">

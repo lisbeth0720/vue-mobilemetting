@@ -149,14 +149,15 @@
       //2.2得到短Token
       getLoginTocken(companyid,username,pwd){
         getTocken(companyid,username,pwd).then(res=>{
+			console.log(res)
 			if(res.code=="0"){
                 this.Ticket=res.data.Ticket;
 		 		this.MaxTicket=res.data.MaxTicket;
 				 console.log(this.Ticket)
 				 //为了能很好的实现其他界面，不用刷新就重新登录，先把信息存到localStorage
-		 		//localStorage.setItem('Ticket',this.Ticket);
-		 		//localStorage.setItem('MaxTicket',this.MaxTicket);
-		 		//localStorage.setItem('username',this.username);
+		 		localStorage.setItem('Ticket',this.Ticket);
+		 		localStorage.setItem('MaxTicket',this.MaxTicket);
+		 		localStorage.setItem('username',this.username);
 
                 // 1.创建对象
                 const obj = {}
@@ -172,7 +173,9 @@
 				this.$router.push("/home"); 
 		   	}else if(res.code=="30007"){
 			   this.$router.push("/login"); 
-		  	}else{
+		  	}else if(res.code=="20004"){//登陆失败
+               alert("登陆失败，请检查账号密码是否输入有误")
+			}else{
 				this.$router.push("/login"); 
 		  	}
         

@@ -259,8 +259,10 @@
     margin-top: 5px;
     height: 30px;
     box-sizing: border-box;
-    width: 100px;
+    /* width: 100px; */
+	padding:2px 8px;
     margin-right: 20px;
+	border:none;
 }
 #selectMeetingDevice {
     color: #fff;
@@ -268,7 +270,8 @@
     margin-top: 5px;
     height: 30px;
     box-sizing: border-box;
-    width: 100px;
+    padding:2px 8px;
+	border:none;
     margin-right: 20px;
 }
 .mt-row textarea{
