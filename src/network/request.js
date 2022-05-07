@@ -23,3 +23,5 @@ export function request(config){
     return instance(config)
 }
 
+//上面的不知道为何不能用post方式
+

@@ -92,3 +92,14 @@ export function formatDate(date, fmt) {
  function padLeftZero(str){
     return ('00'+str).substr(str.length);
  }
+
+export function addZero(str, len, ch) { //补全的变量、补全后的长度、用什么来补
+	str = String(str);
+	var i = -1;
+	if (!ch && ch !== 0) ch = ' ';
+	len = len - str.length;
+	while (++i < len) {
+		str = ch + str;
+	}
+	return str > 0 ? str : "00";
+}

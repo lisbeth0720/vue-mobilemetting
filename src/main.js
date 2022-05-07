@@ -16,6 +16,10 @@ import App from './App.vue'
 import router from './router'//导入路由
 import store from './store'//导入vuex
 
+// import axios from 'axios'
+// axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+// createApp(App).prototype.$axios = axios;
+
 createApp(App).config.productionTip = false
 
 createApp(App).use(router).use(store).mount("#app")
