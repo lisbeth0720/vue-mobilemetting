@@ -16,7 +16,7 @@ cd vue-mobilemetting
 npm install
 
 # 启动server
-npm run dev
+npm run serve
 
 # 编译发布
 npm run build
