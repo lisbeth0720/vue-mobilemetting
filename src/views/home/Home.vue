@@ -15,113 +15,6 @@
           <div @click="clickScreen"
 				       class="screenBtn">筛选</div>
           <room-list :rooms="rooms" class="room" />
-          <ul>
-            <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-             <li>肖战啊啊啊啊</li>
-              <li>肖战啊啊啊啊</li>
-          </ul>
       </better-scroll>
       <back-top @click.native="backTop" v-show="isShowBackTop"/>
       <div class="m-navbar" v-if="nav" @click="nav=false"></div>
@@ -227,7 +120,7 @@
           this.$refs.scroll.refresh();
       },
        contentScroll(position){
-         console.log(position)
+         //console.log(position)
          //1.判断BackTop是否显示
          this.isShowBackTop=(-position.y)>BACK_POSITION;
 
@@ -265,7 +158,7 @@
       roomList(Token,start,end,count,device){
         let page=1;
          getRoomList(Token,start,end,count,device,page).then(res=>{
-           console.log(res)
+          // console.log(res)
            if(res.code=="0"){
               page+=1;
               this.rooms = res.data.data

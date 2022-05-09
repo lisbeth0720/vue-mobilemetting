@@ -6,6 +6,9 @@ const Home =() =>import('../views/home/Home.vue');
 const Order =() =>import('../views/order/Order.vue');
 const Message =() =>import('../views/message/Message.vue');
 const Profile =() =>import('../views/profile/Profile.vue');
+const MineMeeting = () => import('../views/profile/childComps/MineMeeting.vue');
+const MineOrder = () => import('../views/profile/childComps/MineOrder.vue');
+const CommonRoom = () => import('../views/profile/childComps/CommonRoom.vue');
 
 //2.创建路由对象
 const routes=[
@@ -52,6 +55,30 @@ const routes=[
       keepAlive:true//组件需要缓存
     },
     name:"profile"
+  },
+  {
+    path: '/commonRoom',
+    component: CommonRoom,
+    meta: {
+      keepAlive: true//组件需要缓存
+    },
+    name: "commonRoom"
+  },
+  {
+    path: '/mineMeeting',
+    component: MineMeeting,
+    meta: {
+      keepAlive: true//组件需要缓存
+    },
+    name: "mineMeeting"
+  },
+  {
+    path: '/mineOrder',
+    component: MineOrder,
+    meta: {
+      keepAlive: true//组件需要缓存
+    },
+    name: "mineOrder"
   }
  
 ]
