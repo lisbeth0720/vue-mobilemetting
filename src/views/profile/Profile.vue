@@ -83,6 +83,7 @@
       },
       //退出登录
       logout(){
+      
           this.$router.push("/login");
       }
     }
@@ -132,6 +133,7 @@
     border: 1px solid #dddddd;
     text-align: center;
     border-top: none;
+    
 }
 
 .index img {
