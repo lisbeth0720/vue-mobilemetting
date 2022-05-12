@@ -103,3 +103,7 @@ export function addZero(str, len, ch) { //补全的变量、补全后的长度�
 	}
 	return str > 0 ? str : "00";
 }
+
+export function defaultPic(thisImg) {
+	thisImg.setAttribute("src", ("../../assets/img/common/default.jpg"));
+}
