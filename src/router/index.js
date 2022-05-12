@@ -5,6 +5,7 @@ const Login =() =>import('../views/login/Login.vue');
 const Home =() =>import('../views/home/Home.vue');
 const Order =() =>import('../views/order/Order.vue');
 const Message =() =>import('../views/message/Message.vue');
+const DetailsMessage = () => import('../views/message/childComps/MessageInfo.vue');
 const Profile =() =>import('../views/profile/Profile.vue');
 const MineMeeting = () => import('../views/profile/childComps/MineMeeting.vue');
 const MineOrder = () => import('../views/profile/childComps/MineOrder.vue');
@@ -47,6 +48,14 @@ const routes=[
       keepAlive:true//组件需要缓存
     },
     name:"message"
+  },
+  {
+    path: '/message/:id',
+    component: DetailsMessage,
+    meta: {
+      keepAlive: true
+    },
+    name: "detailsMessage"
   },
   {
     path:'/profile',
