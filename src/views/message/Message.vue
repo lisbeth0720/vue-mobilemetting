@@ -105,13 +105,15 @@
       //一键已读
 			readAll(){
 				getAllRead().then(res=>{
-						if(res.code=="0"){//刷新界面
+           let data=res.data;
+						if(data.code=="0"){//刷新界面
 							 //this.$router.push("/message"); 
                //this.$router.go(0)
-               
+               console.log(data)
+               alert(data.message)
 						}else if(res.code=="30001"){//无效token、无权限
 							 this.$router.push("/login"); 
-						}else if(res.code=="30006"){
+						}else if(data.code=="30006"){
 							//getMaxTicket();
                this.$router.push("/login"); 
 						}

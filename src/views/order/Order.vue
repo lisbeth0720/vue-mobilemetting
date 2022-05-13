@@ -162,16 +162,22 @@
 				roomid: null,
 				title: "测试会议",
 				deptname: "研发部",
-				startTime: "2022-05-08 08:00",
-				endTime: "2022-05-08 12:00",
+				startTime: "2022-05-14 15:00",
+				endTime: "2022-05-14 19:00",
 				linkman: "单位超级管理员",
 				linkPhone: "15210872345",
 				showUserPicker: "",
 				hostPhone: "",
-				selectCount: "",
+				selectCount: "1",
 				specialText: "",
-				userListArr: "",
-				deviceListArrChecked: "",
+				userListArr: {
+					SeatCode: "0",
+                    UserLevel: 0,
+                    fullname: "单位超级管理员",
+                    tel: "1652428800",
+                    userID: 1,
+				},
+				deviceListArrChecked: [],
 			}
 		},
 		computed: {
@@ -195,11 +201,12 @@
 			// this.mineJoinObj.fullname = decodeURI(escape(loginInfo.data.name));
 			// this.mineJoinObj.UserLevel = 0;
 			// this.mineJoinObj.SeatCode = "0";
-
 			// this.mineJoinObj.tel = decodeURI(escape(loginInfo.exp));
+            //单独刷新界面，下面的方法不执行，放到mounted里才执行，从会议室跳到这个界面会执行
+			//this.getNowDate()
 		},
 		mounted() {
-
+          console.log(this.orderList)
 		},
 
 		destroyed() {
@@ -336,7 +343,6 @@
 			//得到会议室信息
 			getRoomDetails(roomid,startTime, endTime) {
                getThisRoom(roomid,startTime, endTime).then(res=>{
-                  console.log(res)
 				  if(res.code=="0"){
 					  this.roomItem=res.data.data[0];
                          //var dataList=res.data.data[0];
@@ -351,8 +357,8 @@
 						// var DeviceCount=dataList.DeviceCount;
 						// var deviceList=dataList.deviceList;
 						// var deviceStr="";
+						//console.log(this.roomItem.OrderList)
 						 this.orderList=this.roomItem.OrderList;
-						 
 						// var roomPic=dataList.Picture;
 						//addOrderTime(orderList);
 
@@ -392,18 +398,22 @@
 					// 	}
 					// }
 					//document.getElementsByClassName("loadingPage")[0].style.display = "block";
-					console.log(res)
-					alert(res.message);
+					//alert(res.message);
 					//document.getElementsByClassName("loadingPage")[0].style.display = "none";
-					if (res.code == "0") {
+					let data = res.data;
+					alert(data.message)
+					if (data.code == "0") {
 						setTimeout(function() {
-							this.$router.push("/home");
+							//this.$router.push("/home");
+							//这里执行跳转路由怎么报错
 						}, 2000);
-					} else if (res.code == "30001") { //无效token、无权限
+						this.$router.push("/home");
+					} else if (data.code == "30001") { //无效token、无权限
 						this.$router.push("/login");
 						//top.location.href="../login.html";
-					} else if (res.code == "30006") {
+					} else if (data.code == "30006") {
 						//getMaxTicket();
+						this.$router.push("/login");
 					}
 				})
 		// 		var Ticket2 = localStorage.getItem("Ticket");
@@ -435,6 +445,19 @@
         //      console.log(error);
         //   });
 		 	},
+			 //获取当前时间
+			getNowDate(){
+				var str="";
+				var date=new Date();
+				var year=date.getFullYear();
+				var month=date.getMonth()+1;
+				var day=date.getDate();
+				var hours=date.getHours();
+				var minutes=date.getMinutes();
+				str='{"beginYear":'+year+',"beginMonth":'+month+',"beginDay":'+day+',"beginHours":'+hours+',"beginMinutes":'+minutes+'}';
+				console.log(str)
+				return str;
+			}
 		}
 	}
 </script>

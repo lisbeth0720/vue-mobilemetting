@@ -22,7 +22,7 @@
    import {addZero} from 'common/utils.js'
 
    export default {
-		name: "Order",
+		name: "MeetingTimeTable",
 		components: {
 			
 		},
@@ -47,18 +47,19 @@
 		  }
 		},
 		created() {
-           
+          //this.addOrderTime();
 		},
 		mounted() {
-            this.addOrderTime(this.orderList);
+            this.addOrderTime();
 		},
 		updated () {
 			
 		},
 		methods: {
 			//动态创建时间表格
-			addOrderTime(list){
-				console.log(list)
+			addOrderTime(){
+				let list = this.orderList;
+				console.log(this.orderList)
 				var table1=document.getElementById("startTimeBlockUl");
 				var table2=document.getElementById("meetingContentBlockUl");
 				var table3=document.getElementById("endTimeBlockUl");

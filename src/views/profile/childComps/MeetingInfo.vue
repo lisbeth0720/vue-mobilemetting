@@ -1,6 +1,6 @@
 <template>
      <div class="meetingInfo">
-         <ul>
+         <ul v-if="meetingList.length>0">
                <li class="list-item"
                   v-for="(item,index) in meetingList" 
                   :key="index">
@@ -19,6 +19,9 @@
                   </ul>
                 </li>
           </ul>
+          <div v-else class="empty">
+              <div>暂无</div>
+          </div>
      </div>
 </template>
 <script>
@@ -171,5 +174,10 @@
 .status {
     font-size: 12px;
     color: #999;
+}
+.empty{
+  text-align: center;
+  font-size:24px;
+  margin-top:50px;
 }
 </style>

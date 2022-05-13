@@ -1,9 +1,14 @@
 <template>
-  <ul id="messageList">
-    <li v-for="item in messages" 
-        :key="item"
-        @click="clickItem(item.ID)">{{item.Title.split("@")[1]}}</li>
-  </ul>
+  <div>
+    <ul v-if="messages.length>0" id="messageList">
+      <li v-for="item in messages" 
+          :key="item"
+          @click="clickItem(item.ID)">{{item.Title.split("@")[1]}}</li>
+     </ul>
+     <div v-else class="empty">
+          <div>暂无</div>
+      </div>
+   </div>
 </template>
 
 <script>
@@ -39,4 +44,9 @@ export default {
       background-color:#fff;
       padding:4px 6px;
   }
+  .empty{
+  text-align: center;
+  font-size:24px;
+  margin-top:50px;
+}
 </style>

@@ -1,6 +1,7 @@
 //放的是首页的一些请求
 import { request } from "./request.js";
 import axios from 'axios'
+import qs from 'qs'
 
 //预约会议-//不知道为何不能用post方式
 export function submitOrder(roomid, title, startTime, endTime, linkman, linkPhone, showUserPicker, hostPhone, selectCount, specialText, userListArr, deviceListArrChecked){
@@ -67,24 +68,48 @@ export function submitOrder(roomid, title, startTime, endTime, linkman, linkPhon
         //     console.log(error);
         // });
 
-    return axios.post('http://192.168.1.145:3344/api/order/insert',
-        {
-            "MeetingRoomID": roomid,
-            "Title": title,
-            "StartTime": startTime,
-            "Endtime": endTime,
-            "Linkman": linkman,
-            "LinkPhone": linkPhone,
-            "Hoster": showUserPicker,
-            "HosterPhone": hostPhone,
-            "Amount": selectCount,
-            "Special": specialText,
-            "userList": JSON.parse(JSON.stringify(userListArr)),
-            "deviceList": JSON.parse(JSON.stringify(deviceListArrChecked))
-        },{
+    // return axios.post('http://192.168.1.145:3344/api/order/insert',
+    //     {
+    //         "MeetingRoomID": roomid,
+    //         "Title": title,
+    //         "StartTime": startTime,
+    //         "Endtime": endTime,
+    //         "Linkman": linkman,
+    //         "LinkPhone": linkPhone,
+    //         "Hoster": showUserPicker,
+    //         "HosterPhone": hostPhone,
+    //         "Amount": selectCount,
+    //         "Special": specialText,
+    //         "userList": JSON.parse(JSON.stringify(userListArr)),
+    //         "deviceList": JSON.parse(JSON.stringify(deviceListArrChecked))
+    //     },{
+    //     headers: {
+    //         "Authorization": "Bearer " + Ticket2
+    //     },
+    // })
+    let queryObj = {
+        "MeetingRoomID": roomid,
+        "Title": title,
+        "StartTime": startTime,
+        "Endtime": endTime,
+        "Linkman": linkman,
+        "LinkPhone": linkPhone,
+        "Hoster": showUserPicker,
+        "HosterPhone": hostPhone,
+        "Amount": selectCount,
+        "Special": specialText,
+        "userList": JSON.parse(JSON.stringify(userListArr)),
+        "deviceList": JSON.parse(JSON.stringify(deviceListArrChecked))
+    }
+    return axios({
+        method:'post',
+        url:'http://192.168.1.145:3344/api/order/insert',
+        //data:JSON.stringify(queryObj),//这样不行，下面的写法可以
+        data: qs.stringify(queryObj),
         headers: {
             "Authorization": "Bearer " + Ticket2
         },
+        
     })
 }
 
