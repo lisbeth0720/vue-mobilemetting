@@ -92,20 +92,6 @@
   #profile {
     background-color: #f2f2f2;
   }
-
-  .nav-bar {
-    background-color: var(--color-tint);
-    font-weight: 700;
-    color: #000;
-    /* position:relative; */
-  }
-  /* .nav-bar img{
-     height:18px;
-     position:absolute;
-     top:50%;
-     left:4%;
-     transform: translate(0,-50%)
-  } */
   .signOut{
     box-sizing: border-box;
     min-width: 0px;

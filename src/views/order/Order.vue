@@ -1,8 +1,11 @@
 <template>
 	<div id="order">
 		<nav-bar class="order-nav">
+			<template v-slot:left>
+               <img slot="left" src="~/assets/img/common/back.svg" @click="back"/>
+           </template>
 			<template v-slot:center>
-				<div>会议室</div>
+				<div>预约会议</div>
 			</template>
 		</nav-bar>
 		<better-scroll class="content" ref="scroll" :probe-type="3" @scroll="contentScroll" :pull-up-load="true" @pulling-up="loadMore">
@@ -457,11 +460,22 @@
 				str='{"beginYear":'+year+',"beginMonth":'+month+',"beginDay":'+day+',"beginHours":'+hours+',"beginMinutes":'+minutes+'}';
 				console.log(str)
 				return str;
-			}
+			},
+			//返回上一级
+            back(){
+                this.$router.push("/home"); 
+             },
 		}
 	}
 </script>
 <style scoped>
+  .order-nav img{
+     height:18px;
+     position:absolute;
+     top:50%;
+     left:4%;
+     transform: translate(0,-50%)
+  }
 	#meetingInfo {
 		background: #fff;
 	}

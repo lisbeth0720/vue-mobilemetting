@@ -31,8 +31,19 @@ export default {
     line-height: 44px;
     text-align: center;
     width:100%;
-    border-bottom: 1px solid #eee;
-    box-shadow: 0 1px 1px rgba(100,100,100,.08);
+    /* border-bottom: 1px solid #eee;
+    box-shadow: 0 1px 1px rgba(100,100,100,.08); */
+    position:relative;
+	  box-shadow: 0 1px 6px #ccc;
+	  z-index: 10;
+    right: 0;
+    left: 0;
+    height: 44px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-bottom: 0;
+    background-color: #f7f7f7;
+    color:333;
   }
   .left,.right{
       width:60px;

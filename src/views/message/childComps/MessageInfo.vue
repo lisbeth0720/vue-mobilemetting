@@ -77,22 +77,6 @@
 </script>
 
 <style scoped>
- .nav-bar{
-    /* position: fixed;
-    z-index: 10;
-    right: 0;
-    left: 0;
-    height: 44px;
-    padding-right: 10px;
-    padding-left: 10px;
-    border-bottom: 0;
-    background-color: #f7f7f7;
-    box-shadow: 0 1px 6px #ccc; */
-    background-color: var(--color-tint);
-    font-weight: 700;
-    color: #000;
-    position: relative;
- }
  .nav-bar img{
      height:18px;
      position:absolute;

@@ -213,16 +213,13 @@
     bottom: 60px;
   }
    
-   .home-nav{
-     background-color: var(--color-tint);
-     font-weight: 700;
-     color: #000;
+   /* .home-nav{ */
      /*下面的代码是用浏览器原生滚动时防止顶部导航随着滚动而滚动设置的，现在用了better-scroll所以不用设置了 */
      /* position:fixed;
      top:0;
      left:0;
      z-index:9; */
-   }
+   /* } */
 
    .content {
      /* 上下两部分高度已定，计算中间部分的高度，两种方式，1.用calc属性；2，使用定位 top,bottom给个值,left,right=0*/

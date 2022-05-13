@@ -129,13 +129,6 @@
     height: 100vh;
     background-color:#fff;
   }
-
-  .nav-bar {
-    background-color: var(--color-tint);
-    font-weight: 700;
-    color: #000;
-    position: relative;
-  }
   .nav-bar img{
      height:18px;
      position:absolute;
