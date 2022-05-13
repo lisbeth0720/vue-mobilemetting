@@ -5,19 +5,17 @@
       </nav-bar>
   </div>
 </template>
-
 <script>
   //import NavBar from 'components/common/navbar/NavBar.vue'
   //import CartList from './childComps/CartList'
-	export default {
-		name: "Message",
-    components: {
-		 
+  export default {
+	name: "Message",
+        components: {	 
     },
     computed: {
       
     }
-	}
+}
 </script>
 
 <style scoped>
@@ -37,7 +35,6 @@
     top: 44px;
     bottom: 49px;
     width: 100%;
-
     /* height:calc(100% - 93px);
     overflow: hidden; */
     /* 不加overflow: hidden;的话会在顶部导航上显示滚动 */
