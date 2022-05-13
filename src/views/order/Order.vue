@@ -2,7 +2,7 @@
 	<div id="order">
 		<nav-bar class="order-nav">
 			<template v-slot:center>
-				<div>会议室</div>
+				<div>预约会议</div>
 			</template>
 		</nav-bar>
 		<better-scroll class="content" ref="scroll" :probe-type="3" @scroll="contentScroll" :pull-up-load="true" @pulling-up="loadMore">
