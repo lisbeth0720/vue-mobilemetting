@@ -34,11 +34,10 @@
 
 <script>
   import NavBar from 'components/common/navbar/NavBar.vue';
-
-	export default {
-		name: "Profile",
-    components: {
-       NavBar
+  export default {
+	name: "Profile",
+        components: {
+            NavBar
     },
     data: function () {
 		  return {
@@ -87,9 +86,8 @@
           this.$router.push("/login");
       }
     }
-	}
+}
 </script>
-
 <style scoped>
   #profile {
     background-color: #f2f2f2;
