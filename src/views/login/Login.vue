@@ -58,11 +58,13 @@
 			</label>
 		</fieldset>
 	</form>
+	 <toast :message="message" :isShow="isShow"></toast>
   </div>
 </template>
 <script>
   import { useStore } from 'vuex'
   import {mapActions} from 'vuex'
+  import Toast from 'components/common/toast/Toast'
   
   //3.一些方法
   import {getCompanyId,getTocken,getMaxTicket} from "network/login.js";
@@ -71,7 +73,7 @@
   export default {
 	name: "Login",
     components: {
-	    
+	    Toast
     },
     data() {
      const store = useStore()
@@ -85,6 +87,9 @@
         companyid:"0",//默认选中第一个
 
 		coppanyidList:[],
+
+        message:'提示信息',
+		iShow:true
       }
     },
     computed: {
@@ -175,10 +180,16 @@
 			   this.$router.push("/login"); 
 		  	}else if(res.code=="20004"){//登陆失败
                alert("登陆失败，请检查账号密码是否输入有误")
-			}else{
+			   this.isShow=true;
+               this.message=res;
+                  //用定时器，让提示框一会消失
+                setTimeout(()=>{
+                  this.isShow=false;
+                  this.message='';
+                 },1500)
+		  	}else{
 				this.$router.push("/login"); 
 		  	}
-        
         })
       },
 
