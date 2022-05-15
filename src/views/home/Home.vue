@@ -1,19 +1,17 @@
 <template>
   <div id="home">
       <nav-bar class="home-nav">
-        <template v-slot:center><div>首页</div></template>
+        <template v-slot:center><div>会议室</div></template>
       </nav-bar> 
   </div>
 </template>
 
 <script>
  //1.1公共组件或者常量
-  import NavBar from 'components/common/navbar/NavBar.vue'
-  
+  import NavBar from 'components/common/navbar/NavBar.vue' 
 
  //2.子组件
  // import HomeSwiper from './childComps/HomeSwiper.vue'
-  
   
   //3.一些方法
   //import {getHomeMultidata,getHomeGoods} from "network/home.js";
@@ -24,10 +22,10 @@
   //import emitter from "assets/utils/mitt.js"
 
   export default {
-		name: "Home",
-    components: {
-		  NavBar
-    },
+     name: "Home",
+     components: {
+	NavBar
+     },
     data() {
 		  return {
 		    banners: [],
