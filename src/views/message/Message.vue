@@ -1,7 +1,7 @@
 <template>
   <div id="message">
      <nav-bar class="nav-bar">
-        <template v-slot:center><div>消息</div></template>
+        <template v-slot:center><div>消息中心</div></template>
       </nav-bar>
   </div>
 </template>
@@ -12,12 +12,10 @@
 	name: "Message",
         components: {	 
     },
-    computed: {
-      
+    computed: {      
     }
 }
 </script>
-
 <style scoped>
   #message {
     position: relative;
