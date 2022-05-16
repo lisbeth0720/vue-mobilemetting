@@ -2,7 +2,7 @@
   <div id="profile">
     <!-- <nav-bar class="nav-bar">
       <template v-slot:center>
-            <div slot="center">我的</div>
+            <div slot="center">个人中心</div>
        </template>
       </nav-bar> -->
     <!--1.单独封装一个组件: 利用slot知识点-->
