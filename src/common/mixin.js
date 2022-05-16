@@ -24,7 +24,7 @@ export const itemListenerMixin = {
 
 export const backTopMixin = {
     components: {
-        BackTop
+        BackTop,
     },
     data: function() {
         return {
@@ -37,7 +37,6 @@ export const backTopMixin = {
         }
     }
 }
-
 
 export const tabControlMixin = {
     data: function () {
@@ -59,8 +58,10 @@ export const tabControlMixin = {
             this.currentType = "sell"
             break
         }
+          
         //this.currentIndex=index;
         //console.log(this.currentType,this.currentIndex);
+          
       }
     }
   }
